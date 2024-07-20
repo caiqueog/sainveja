@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400&amp;display=swap"); body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: r@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&amp;display=swap');
+        .at-section__title {
+            margin: 0 0 70px;
+            color: #ffffff;
+            font-family: "Roboto", sans-serif;
+            font-size: 50px;
+            font-weight: 300;
+            line-height: 2.625rem;
+            text-align: center;
+        }
+
+        .at-section__members {
+            margin: 0 0 70px;
+            color: rgb(255, 255, 255);
+            font-family: "Roboto", sans-serif;
+            font-size: 2.1rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .at-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .at-grid[data-column="1"] .at-column {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            flex-basis: 100%;
+        }
+
+        .at-grid[data-column="2"] .at-column {
+            width: 50%;
+            max-width: 50%;
+            min-width: 50%;
+            flex-basis: 50%;
+        }
+
+        .at-grid[data-column="3"] .at-column {
+            width: 33.3333333333%;
+            max-width: 33.3333333333%;
+            min-width: 33.3333333333%;
+            flex-basis: 33.3333333333%;
+        }
+
+        .at-grid[data-column="4"] .at-column {
+            width: 25%;
+            max-width: 25%;
+            min-width: 25%;
+            flex-basis: 25%;
+        }
+
+        .at-grid[data-column="5"] .at-column {
+            width: 20%;
+            max-width: 20%;
+            min-width: 20%;
+            flex-basis: 20%;
+        }
+
+        .at-grid[data-column="6"] .at-column {
+            width: 16.6666666667%;
+            max-width: 16.6666666667%;
+            min-width: 16.6666666667%;
+            flex-basis: 16.6666666667%;
+        }
+
+        .at-grid[data-column="7"] .at-column {
+            width: 14.2857142857%;
+            max-width: 14.2857142857%;
+            min-width: 14.2857142857%;
+            flex-basis: 14.2857142857%;
+        }
+
+        .at-grid[data-column="8"] .at-column {
+            width: 12.5%;
+            max-width: 12.5%;
+            min-width: 12.5%;
+            flex-basis: 12.5%;
+        }
+
+        .at-grid[data-column="9"] .at-column {
+            width: 11.1111111111%;
+            max-width: 11.1111111111%;
+            min-width: 11.1111111111%;
+            flex-basis: 11.1111111111%;
+        }
+
+        .at-column {
+            z-index: 0;
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+        }
+
+        .at-column:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .at-column:hover {
+            z-index: 1;
+            box-shadow: 0 8px 50px rgba(0, 0, 0, 0.0);
+            transform: scale(1.05);
+            transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+        }
+
+        .at-column:hover .at-social {
+            margin: 16px 0 0;
+            opacity: 1;
+        }
+
+        @media (max-width: 800px) {
+            .at-column {
+                width: 50% !important;
+                max-width: 50% !important;
+                min-width: 50% !important;
+                flex-basis: 50% !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .at-column {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+                flex-basis: 100% !important;
+            }
+        }
+
+        .at-user {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+
+        .at-server__avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 300px;
+            position: relative;
+            margin: 0 auto 50px;
+            overflow: hidden;
+        }
+
+        .at-server__avatar img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .at-user__avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 100%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .at-user__avatar img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .at-user__name {
+            color: #ffffff;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 2.625rem;
+        }
+
+        .at-user__title {
+            color: #6F808A;
+            font-family: "Roboto", sans-serif;
+            font-size: 0.875rem;
+            line-height: 2.375rem;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1170px;
+            width: 100%;
+            margin: 100px auto;
+            padding: 0 90px;
+            box-sizing: border-box;
+            transform-origin: top center;
+        }
+
+        #button {
+            border: 1px solid #ffffff;
+            background-color: none;
+            text-align: center;
+            padding: 14px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            transition: 0.3s background, 0.3s color;
+            width: 160px;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, 0);
+            position: relative;
+        }
+
+        #button:hover {
+            background-color: #ffffff;
+            color: #fff;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #ffffff;
+        }
+
+        #video {
+            width: 100vw;
+            height: 91vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            zoom: 1.1;
+        }
+
+        .description {
+            color: #ffffff;
+            font-family: Montserrat;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            overflow: hidden !important;
+            max-height: 130px;
+            font-size: 15px;
+        }gb(54, 57, 63);
+}
+
+.all {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .avatar:focus {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+.discord-profile {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px, rgba(0, 0, 0, 0.4) 0px 0px 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin: 10px;
+    max-width: 250px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.profile-cover {
+    width: 100%;
+    height: 200px;
+    background-image: url("");
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    z-index: -1;
+}
+
+.avatar1 {
+    width: 130px;
+    height: 130px;
+    background-image: url("outliyer.png");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    border: 5px solid rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+.avatar2 {
+    width: 130px;
+    height: 130px;
+    background-image: url("outlier.png");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    border: 5px solid rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+.avatar3 {
+    width: 130px;
+    height: 130px;
+    background-image: url("outlyer.png");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    border: 5px solid rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+.avatar4 {
+    width: 150px;
+    height: 150px;
+    background-image: url("ian.png");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    border: 5px solid rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+.avatars {
+    width: 150px;
+    height: 150px;
+    background-image: url("blood.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    border: 5px solid rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+.avatard {
+    width: 200px;
+    height: 200px;
+    background-image: url("https://cdn.discordapp.com/attachments/1152990121885442199/1165821142158811187/59e23f36b8250442def64ad610e1f40b.gif?ex=65483e8c&is=6535c98c&hm=640107e07620e022441a1aa622d2fe5f43a26141e4304b7ffc74514f06d91e35&");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+    border: 5px solid rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.avatars:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.nick {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px -9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.nickr {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+    margin: 0px 0px -9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.subnick {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0.7;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.badge[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+.badge[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+    font-family: Arial, sans-serif;
+}
+
+.badge[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+.badge, .social-button, .subnick {
+    margin-top: 10px;
+}
+
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-button {
+    margin: 0px 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.social-button:hover {
+    background-color: red;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.server-button {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.server-button-text {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+audio {
+}
+
+audio {
+}
+
+.discord-profilee {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px, rgba(0, 0, 0, 0.4) 0px 0px 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin: 25px;
+    max-width: 120px;
+    height: 120px;
+    background-color: rgb(0, 0, 0);
+}
+
+.social-buttonss {
+    align-items: center;
+    justify-content: center;
+}
+
+.social-buttonn {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.social-buttonn:hover {
+    background-color: red;
+}
+
+.social-iconn {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.server-buttonn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.server-buttonn-text {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    cursor: default;
+    align-items: center;
+    justify-content: center;
+}
+
+.userss {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: beige;
+    margin: 10px -110px 10px 10px;
+}
